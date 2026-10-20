@@ -1,0 +1,2174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nanda Yudhistira Wibowo | Portofolio & Personal Website</title>
+    <meta name="description" content="Website portofolio resmi Nanda Yudhistira Wibowo (ndhistira). Mahasiswa Ilmu Komputer Universitas Yatsi Madani, Tangerang.">
+    <meta name="keywords" content="Nanda Yudhistira Wibowo, ndhistira, Mahasiswa Ilmu Komputer, Universitas Yatsi Madani, Tangerang, Portofolio IT, Web Developer">
+    <meta name="author" content="Nanda Yudhistira Wibowo">
+    
+    <!-- Open Graph / Meta Sosial -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ndhistira.my.id/">
+    <meta property="og:title" content="Nanda Yudhistira Wibowo | Portofolio Pribadi">
+    <meta property="og:description" content="Mahasiswa Ilmu Komputer Universitas Yatsi Madani, Tangerang. Portofolio persiapan karier dan eksplorasi dunia IT.">
+    <meta property="og:image" content="profile.jpg">
+
+    <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* ==========================================================================
+           ROOT VARIABLES & WARNA
+           ========================================================================== */
+        :root {
+            --bg-body: #0a0f1d;
+            --bg-card: #111827;
+            --bg-card-hover: #172238;
+            --bg-nav: rgba(10, 15, 29, 0.88);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(56, 189, 248, 0.4);
+            
+            --text-title: #f8fafc;
+            --text-body: #cbd5e1;
+            --text-muted: #94a3b8;
+            
+            --accent-primary: #38bdf8;
+            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            --accent-glow: rgba(56, 189, 248, 0.25);
+            
+            --wa-green: #22c55e;
+            --wa-green-hover: #16a34a;
+            --wa-glow: rgba(34, 197, 94, 0.35);
+
+            --radius-sm: 8px;
+            --radius-md: 14px;
+            --radius-lg: 20px;
+            --radius-full: 9999px;
+            
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ==========================================================================
+           RESET & BASE
+           ========================================================================== */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            color: var(--text-body);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            line-height: 1.7;
+            overflow-x: hidden;
+            width: 100%;
+            max-width: 100%;
+            position: relative;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.07) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(129, 140, 248, 0.07) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1140px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .section {
+            padding: 95px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        .section-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 16px;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-primary);
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: var(--radius-full);
+            font-size: 0.825rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: var(--text-title);
+            margin-bottom: 14px;
+            letter-spacing: -0.5px;
+        }
+
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+        }
+
+        .gradient-text {
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+        }
+
+        /* ==========================================================================
+           BUTTONS
+           ========================================================================== */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            border: 1px solid transparent;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn-primary {
+            background: var(--accent-gradient);
+            color: #04101e;
+            box-shadow: 0 4px 20px var(--accent-glow);
+            font-weight: 700;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(56, 189, 248, 0.45);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--wa-green);
+            color: #ffffff;
+            box-shadow: 0 4px 18px var(--wa-glow);
+            font-weight: 700;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--wa-green-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(34, 197, 94, 0.5);
+        }
+
+        .btn-outline {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            color: var(--text-title);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: var(--accent-primary);
+            color: var(--accent-primary);
+            transform: translateY(-3px);
+        }
+
+        /* ==========================================================================
+           NAVBAR
+           ========================================================================== */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: var(--bg-nav);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .navbar-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 75px;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--text-title);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .logo .dot {
+            color: var(--accent-primary);
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-link {
+            font-size: 0.925rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            position: relative;
+            padding: 6px 0;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--accent-primary);
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: var(--accent-primary);
+            transition: var(--transition);
+            border-radius: var(--radius-full);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-cta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .nav-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-title);
+            font-size: 1.4rem;
+            cursor: pointer;
+        }
+
+        /* ==========================================================================
+           HERO SECTION
+           ========================================================================== */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 110px;
+            padding-bottom: 60px;
+            position: relative;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            align-items: center;
+            gap: 50px;
+        }
+
+        .status-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 7px 16px;
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: var(--radius-full);
+            color: #86efac;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 22px;
+        }
+
+        .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--wa-green);
+            border-radius: 50%;
+            box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            animation: pulseAnimation 2s infinite;
+        }
+
+        @keyframes pulseAnimation {
+            0% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+            }
+        }
+
+        .hero-title {
+            font-size: 3.1rem;
+            font-weight: 800;
+            line-height: 1.15;
+            color: var(--text-title);
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.05rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .hero-description {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            line-height: 1.75;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-bottom: 35px;
+        }
+
+        .hero-socials {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .hero-socials-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+        }
+
+        .social-icon-btn {
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid var(--border-color);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-body);
+            font-size: 1.1rem;
+            transition: var(--transition);
+        }
+
+        .social-icon-btn:hover {
+            color: var(--accent-primary);
+            border-color: var(--accent-primary);
+            background: rgba(56, 189, 248, 0.1);
+            transform: translateY(-3px);
+        }
+
+        /* Hero Profile Card (Clean & Spacious - Tidak Numpuk) */
+        .hero-image-wrapper {
+            position: relative;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hero-glow-back {
+            position: absolute;
+            width: 320px;
+            height: 420px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.28) 0%, rgba(129, 140, 248, 0.15) 50%, transparent 70%);
+            filter: blur(45px);
+            z-index: -1;
+            top: 15px;
+        }
+
+        .hero-profile-card {
+            position: relative;
+            width: 340px;
+            background: linear-gradient(180deg, rgba(22, 30, 49, 0.85) 0%, rgba(15, 23, 42, 0.95) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 24px;
+            padding: 14px;
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(12px);
+            transition: var(--transition);
+        }
+
+        .hero-profile-card:hover {
+            border-color: rgba(56, 189, 248, 0.35);
+            box-shadow: 0 25px 55px rgba(0, 0, 0, 0.55);
+            transform: translateY(-4px);
+        }
+
+        .profile-photo-container {
+            width: 100%;
+            height: 330px;
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            background: #020617;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .profile-photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 25%;
+            transition: transform 0.5s ease;
+        }
+
+        .hero-profile-card:hover .profile-photo-container img {
+            transform: scale(1.03);
+        }
+
+        .profile-status-pill {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(10, 15, 29, 0.82);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            padding: 5px 12px;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #86efac;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .profile-status-pill .status-indicator {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: var(--wa-green);
+            box-shadow: 0 0 8px rgba(34, 197, 94, 0.8);
+        }
+
+        /* Detail Items Under Photo */
+        .profile-card-details {
+            margin-top: 14px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .profile-detail-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+        }
+
+        .profile-detail-item:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        .profile-detail-item.wa-item {
+            border-color: rgba(34, 197, 94, 0.25);
+            background: rgba(34, 197, 94, 0.05);
+        }
+
+        .profile-detail-item.wa-item:hover {
+            border-color: rgba(34, 197, 94, 0.45);
+            background: rgba(34, 197, 94, 0.1);
+        }
+
+        .detail-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .detail-icon.wa {
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--wa-green);
+        }
+
+        .detail-text {
+            flex-grow: 1;
+        }
+
+        .detail-text span {
+            display: block;
+            font-size: 0.725rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 2px;
+        }
+
+        .detail-text strong {
+            display: block;
+            font-size: 0.88rem;
+            color: var(--text-title);
+            font-weight: 600;
+        }
+
+        .detail-action-btn {
+            width: 30px;
+            height: 30px;
+            border-radius: 8px;
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--wa-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .detail-action-btn:hover {
+            background: var(--wa-green);
+            color: #ffffff;
+            transform: translateX(2px);
+        }
+
+        /* ==========================================================================
+           ABOUT SECTION (PERSONAL NARRATIVE & HONEST STORY)
+           ========================================================================== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 36px;
+            align-items: stretch;
+        }
+
+        .about-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 34px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .about-card h3 {
+            font-size: 1.45rem;
+            color: var(--text-title);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .about-card h3 i {
+            color: var(--accent-primary);
+        }
+
+        .about-card p {
+            color: var(--text-body);
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 16px;
+        }
+
+        .philosophical-quote {
+            background: rgba(56, 189, 248, 0.05);
+            border-left: 3px solid var(--accent-primary);
+            padding: 14px 18px;
+            border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+            margin: 18px 0;
+            font-style: italic;
+            color: #e2e8f0;
+            font-size: 0.95rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 14px;
+            margin-top: 20px;
+        }
+
+        .info-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+        }
+
+        .info-label {
+            font-size: 0.775rem;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-value {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-title);
+        }
+
+        /* Pillars Side Column */
+        .pillars-column {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .pillar-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            transition: var(--transition);
+        }
+
+        .pillar-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-3px);
+            background: var(--bg-card-hover);
+        }
+
+        .pillar-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .pillar-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+        }
+
+        .pillar-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-title);
+        }
+
+        .pillar-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.65;
+        }
+
+        /* ==========================================================================
+           SKILLS SECTION (HONEST CATEGORIZATION)
+           ========================================================================== */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+        }
+
+        .skill-box {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 28px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .skill-box:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+            background: var(--bg-card-hover);
+        }
+
+        .skill-box-badge {
+            display: inline-block;
+            align-self: flex-start;
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .badge-mastered {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent-primary);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .badge-learning {
+            background: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .badge-method {
+            background: rgba(168, 85, 247, 0.15);
+            color: #c084fc;
+            border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+
+        .skill-box-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-title);
+            margin-bottom: 12px;
+        }
+
+        .skill-box-desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: auto;
+        }
+
+        .tech-pill-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 14px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-full);
+            font-size: 0.85rem;
+            color: var(--text-body);
+            font-weight: 500;
+        }
+
+        .tech-pill-tag i {
+            color: var(--accent-primary);
+        }
+
+        /* ==========================================================================
+           LEARNING JOURNEY & TIMELINE
+           ========================================================================== */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding-left: 30px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 10px;
+            bottom: 10px;
+            width: 2px;
+            background: rgba(56, 189, 248, 0.25);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -28px;
+            top: 6px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--bg-body);
+            border: 3px solid var(--accent-primary);
+        }
+
+        .timeline-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 22px 26px;
+            transition: var(--transition);
+        }
+
+        .timeline-card:hover {
+            border-color: var(--border-hover);
+            transform: translateX(4px);
+        }
+
+        .timeline-period {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent-primary);
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .timeline-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-title);
+            margin-bottom: 6px;
+        }
+
+        .timeline-institution {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .timeline-desc {
+            font-size: 0.92rem;
+            color: var(--text-body);
+            line-height: 1.65;
+        }
+
+        /* ==========================================================================
+           PORTFOLIO / PROJECTS
+           ========================================================================== */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 28px;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--border-hover);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4);
+        }
+
+        .project-preview {
+            height: 180px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .project-preview-icon {
+            font-size: 3.2rem;
+            color: rgba(56, 189, 248, 0.3);
+            transition: transform 0.4s ease;
+        }
+
+        .project-card:hover .project-preview-icon {
+            transform: scale(1.12);
+            color: var(--accent-primary);
+        }
+
+        .project-tag-floating {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            background: rgba(10, 15, 29, 0.85);
+            backdrop-filter: blur(4px);
+            padding: 4px 12px;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent-primary);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+        }
+
+        .project-content {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-title);
+            margin-bottom: 10px;
+        }
+
+        .project-desc {
+            font-size: 0.92rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            flex-grow: 1;
+            line-height: 1.65;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 22px;
+        }
+
+        .tech-pill {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: var(--radius-sm);
+            color: var(--text-body);
+        }
+
+        .project-links {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 16px;
+        }
+
+        .project-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--text-body);
+        }
+
+        .project-btn:hover {
+            color: var(--accent-primary);
+        }
+
+        /* ==========================================================================
+           CONTACT & WHATSAPP SECTION
+           ========================================================================== */
+        .contact-box {
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.95) 0%, rgba(10, 15, 29, 0.95) 100%);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: var(--radius-lg);
+            padding: 48px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-box::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            right: -100px;
+            width: 250px;
+            height: 250px;
+            background: radial-gradient(circle, rgba(34, 197, 94, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            min-width: 0;
+        }
+
+        .contact-grid > * {
+            min-width: 0;
+        }
+
+        .contact-info-title {
+            font-size: 1.85rem;
+            font-weight: 800;
+            color: var(--text-title);
+            margin-bottom: 14px;
+        }
+
+        .contact-info-desc {
+            color: var(--text-muted);
+            font-size: 1.025rem;
+            margin-bottom: 28px;
+            line-height: 1.7;
+        }
+
+        .contact-channels {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .channel-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 18px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        .channel-item:hover {
+            border-color: var(--accent-primary);
+            background: rgba(56, 189, 248, 0.05);
+            transform: translateX(4px);
+        }
+
+        .channel-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: rgba(56, 189, 248, 0.12);
+            color: var(--accent-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .channel-icon.wa {
+            background: rgba(34, 197, 94, 0.15);
+            color: var(--wa-green);
+        }
+
+        .channel-icon.ig {
+            background: rgba(236, 72, 153, 0.15);
+            color: #f472b6;
+        }
+
+        .channel-detail {
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        .channel-detail span {
+            display: block;
+            font-size: 0.775rem;
+            color: var(--text-muted);
+        }
+
+        .channel-detail strong {
+            display: block;
+            font-size: 0.95rem;
+            color: var(--text-title);
+            word-break: break-all;
+            overflow-wrap: anywhere;
+        }
+
+        /* Direct WhatsApp Form */
+        .wa-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            position: relative;
+            min-width: 0;
+            max-width: 100%;
+            box-sizing: border-box;
+        }
+
+        .wa-card-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .wa-card-header i {
+            font-size: 1.8rem;
+            color: var(--wa-green);
+        }
+
+        .wa-card-header h4 {
+            font-size: 1.2rem;
+            color: var(--text-title);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(17, 24, 39, 0.85);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-sm);
+            color: var(--text-title);
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--wa-green);
+            box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.15);
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 95px;
+        }
+
+        /* ==========================================================================
+           FOOTER
+           ========================================================================== */
+        footer {
+            background: #060911;
+            border-top: 1px solid var(--border-color);
+            padding: 45px 0 35px;
+            color: var(--text-muted);
+            font-size: 0.925rem;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .footer-logo {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--text-title);
+        }
+
+        .footer-logo span {
+            color: var(--accent-primary);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-primary);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.04);
+            padding-top: 25px;
+            font-size: 0.85rem;
+        }
+
+        /* ==========================================================================
+           FLOATING WHATSAPP BUTTON
+           ========================================================================== */
+        .floating-wa-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            width: 58px;
+            height: 58px;
+            border-radius: 50%;
+            background-color: var(--wa-green);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 8px 24px rgba(34, 197, 94, 0.45);
+            transition: var(--transition);
+        }
+
+        .floating-wa-btn:hover {
+            transform: scale(1.1) translateY(-3px);
+            box-shadow: 0 12px 30px rgba(34, 197, 94, 0.6);
+            color: #ffffff;
+        }
+
+        .floating-wa-tooltip {
+            position: absolute;
+            right: 70px;
+            background: #111827;
+            color: #f8fafc;
+            padding: 8px 14px;
+            border-radius: var(--radius-sm);
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            pointer-events: none;
+            opacity: 0;
+            transform: translateX(10px);
+            transition: var(--transition);
+        }
+
+        .floating-wa-btn:hover .floating-wa-tooltip {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* ==========================================================================
+           RESPONSIVE DESIGN (MEDIA QUERIES)
+           ========================================================================== */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 40px;
+            }
+
+            .hero-subtitle {
+                justify-content: center;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .hero-socials {
+                justify-content: center;
+            }
+
+            .hero-image-wrapper {
+                order: -1;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .navbar-content {
+                height: 65px;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 65px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 65px);
+                background: rgba(10, 15, 29, 0.98);
+                backdrop-filter: blur(15px);
+                flex-direction: column;
+                justify-content: center;
+                gap: 25px;
+                transition: var(--transition);
+                z-index: 9999;
+            }
+
+            .nav-menu.open {
+                left: 0;
+            }
+
+            .nav-link {
+                font-size: 1.15rem;
+            }
+
+            .nav-cta .btn {
+                display: none;
+            }
+
+            .nav-toggle {
+                display: block;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+
+            .section-title {
+                font-size: 1.8rem;
+                word-break: break-word;
+            }
+
+            .hero-title {
+                font-size: 2.15rem;
+                word-break: break-word;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+            }
+
+            .hero-profile-card {
+                width: 100%;
+                max-width: 320px;
+                margin: 0 auto;
+            }
+
+            .profile-photo-container {
+                height: 290px;
+            }
+
+            .about-card {
+                padding: 24px 16px;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-value {
+                word-break: break-all;
+            }
+
+            .skills-grid,
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-box {
+                padding: 22px 14px;
+                border-radius: var(--radius-md);
+            }
+
+            .contact-info-title {
+                font-size: 1.55rem;
+                word-break: break-word;
+            }
+
+            .channel-item {
+                padding: 12px 12px;
+                gap: 12px;
+            }
+
+            .channel-detail strong {
+                font-size: 0.88rem;
+                word-break: break-all;
+            }
+
+            .wa-card {
+                padding: 20px 14px;
+                border-radius: var(--radius-md);
+            }
+
+            .wa-card .btn-whatsapp {
+                font-size: 0.9rem;
+                padding: 12px 10px;
+                white-space: normal;
+                word-break: break-word;
+            }
+
+            .floating-wa-btn {
+                bottom: 18px;
+                right: 18px;
+                width: 50px;
+                height: 50px;
+                font-size: 1.5rem;
+            }
+
+            .floating-wa-tooltip {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 14px;
+            }
+
+            .hero-title {
+                font-size: 1.85rem;
+            }
+
+            .section-title {
+                font-size: 1.6rem;
+            }
+
+            .hero-profile-card {
+                max-width: 100%;
+            }
+
+            .profile-photo-container {
+                height: 270px;
+            }
+
+            .contact-box {
+                padding: 18px 12px;
+            }
+
+            .wa-card {
+                padding: 16px 12px;
+            }
+
+            .wa-card-header h4 {
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================
+         NAVBAR
+         ========================================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container navbar-content">
+            <a href="#hero" class="logo">
+                ndhistira<span class="dot">.</span>
+            </a>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active">Beranda</a></li>
+                <li><a href="#about" class="nav-link">Tentang</a></li>
+                <li><a href="#journey" class="nav-link">Perjalanan</a></li>
+                <li><a href="#skills" class="nav-link">Keahlian</a></li>
+                <li><a href="#projects" class="nav-link">Portofolio</a></li>
+                <li><a href="#contact" class="nav-link">Kontak</a></li>
+            </ul>
+
+            <div class="nav-cta">
+                <a href="https://wa.me/6281288951254?text=Halo%20Nanda%2C%20saya%20melihat%20website%20portofolio%20kamu." target="_blank" class="btn btn-whatsapp" style="padding: 9px 18px; font-size: 0.85rem;">
+                    <i class="fa-brands fa-whatsapp"></i> Chat WhatsApp
+                </a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         HERO SECTION
+         ========================================== -->
+    <section id="hero" class="section">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Hero Left: Authentic Text -->
+                <div class="hero-content">
+                    <div class="status-badge">
+                        <span class="pulse-dot"></span>
+                        Mahasiswa Ilmu Komputer • Terbuka untuk Kolaborasi & Magang
+                    </div>
+                    
+                    <h1 class="hero-title">
+                        Halo, Saya <br>
+                        <span class="gradient-text">Nanda Yudhistira Wibowo</span>
+                    </h1>
+
+                    <div class="hero-subtitle">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Tech Explorer • Web Enthusiast • Self-Learner</span>
+                    </div>
+
+                    <p class="hero-description">
+                        Mahasiswa Ilmu Komputer di <strong>Universitas Yatsi Madani</strong> berdomisili di Kota Tangerang. Memiliki latar belakang SMK Multimedia dan antusiasme tinggi dalam mengeksplorasi teknologi web modern, logika pemrograman, serta arsitektur digital secara mandiri.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="https://wa.me/6281288951254?text=Halo%20Nanda%2C%20saya%20tertarik%20untuk%20berdiskusi%20dengan%20Anda." target="_blank" class="btn btn-whatsapp">
+                            <i class="fa-brands fa-whatsapp" style="font-size: 1.15rem;"></i>
+                            Hubungi via WhatsApp
+                        </a>
+                        <a href="#about" class="btn btn-primary">
+                            <i class="fa-solid fa-user-astronaut"></i>
+                            Kenali Profil Saya
+                        </a>
+                        <a href="#projects" class="btn btn-outline">
+                            <i class="fa-solid fa-folder-open"></i>
+                            Lihat Eksplorasi
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <span class="hero-socials-label">Koneksi Resmi:</span>
+                        <a href="https://wa.me/6281288951254" target="_blank" class="social-icon-btn" title="WhatsApp: 081288951254" aria-label="WhatsApp">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                        <a href="https://www.instagram.com/nywx22?dlrf=OXd3cTcxbGcxMnhq" target="_blank" class="social-icon-btn" title="Instagram: @nywx22" aria-label="Instagram">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/nandayudhistirawibowo" target="_blank" class="social-icon-btn" title="GitHub: nandayudhistirawibowo" aria-label="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="mailto:nandayudhistiraw@gmail.com" class="social-icon-btn" title="Email: nandayudhistiraw@gmail.com" aria-label="Email">
+                            <i class="fa-regular fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Right: Photo & Clean Profile Card (Tidak Numpuk) -->
+                <div class="hero-image-wrapper">
+                    <div class="hero-glow-back"></div>
+                    <div class="hero-profile-card">
+                        <!-- Clean Unobstructed Photo -->
+                        <div class="profile-photo-container">
+                            <img src="profile.jpg" alt="Foto Profil Nanda Yudhistira Wibowo" loading="eager">
+                            <div class="profile-status-pill">
+                                <span class="status-indicator"></span> Aktif
+                            </div>
+                        </div>
+
+                        <!-- Card Details Under Photo (Rapi & Bersih) -->
+                        <div class="profile-card-details">
+                            <!-- Item 1: Kampus -->
+                            <div class="profile-detail-item">
+                                <div class="detail-icon">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <span>Perguruan Tinggi</span>
+                                    <strong>Universitas Yatsi Madani</strong>
+                                </div>
+                            </div>
+
+                            <!-- Item 2: WhatsApp (Bisa Diklik Langsung) -->
+                            <div class="profile-detail-item wa-item">
+                                <div class="detail-icon wa">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div class="detail-text">
+                                    <span>WhatsApp Langsung</span>
+                                    <strong>0812-8895-1254</strong>
+                                </div>
+                                <a href="https://wa.me/6281288951254?text=Halo%20Nanda%2C%20saya%20menghubungi%20lewat%20website%20portofolio%20kamu." target="_blank" class="detail-action-btn" title="Kirim Chat WhatsApp">
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         ABOUT SECTION
+         ========================================== -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-address-card"></i> Narasi Personal</span>
+                <h2 class="section-title">Tentang <span class="gradient-text">Saya</span></h2>
+                <p class="section-desc">Mengenal latar belakang, cara pandang, dan motivasi saya berkarier di ranah teknologi informasi.</p>
+            </div>
+
+            <div class="about-grid">
+                <!-- Personal Narrative Card -->
+                <div class="about-card">
+                    <div>
+                        <h3><i class="fa-solid fa-compass"></i> Dari Multimedia Menuju Ilmu Komputer</h3>
+                        <p>
+                            Halo! Nama saya <strong>Nanda Yudhistira Wibowo</strong> (akrab disapa <em>Nanda</em> atau <em>Ndhistira</em>). Ketertarikan saya pada dunia digital berakar sejak masa SMK di jurusan <strong>Multimedia</strong>. Di sana, saya terbiasa mengolah komunikasi visual, desain grafis (Canva), hingga merancang media presentasi interaktif.
+                        </p>
+                        <p>
+                            Rasa penasaran untuk memahami bagaimana sebuah sistem digital bekerja di balik layar mendorong saya melanjutkan studi ke jenjang <strong>S1 Ilmu Komputer</strong> di <strong>Fakultas Teknologi dan Bisnis, Universitas Yatsi Madani</strong>. Bagi saya, coding adalah jembatan yang menghubungkan kepekaan estetika visual dengan ketepatan logika sistematis.
+                        </p>
+
+                        <!-- Sisi Pemikir / Eksistensialisme -->
+                        <div class="philosophical-quote">
+                            <i class="fa-solid fa-quote-left" style="color: var(--accent-primary); margin-right: 6px;"></i>
+                            "Di luar layar dan baris kode, saya adalah seorang <em>deep thinker</em> yang tertarik pada eksistensialisme dan filsafat pemikiran. Memahami esensi diri dan cara berpikir manusia melatih saya memecahkan masalah dengan sudut pandang yang lebih luas, reflektif, dan tenang."
+                        </div>
+
+                        <p>
+                            Website ini saya bangun sebagai portofolio persiapan karier profesional dan ruang dokumentasi proses belajar yang jujur—tanpa klaim berlebihan, melainkan sebagai bukti komitmen saya untuk terus tumbuh dan beradaptasi.
+                        </p>
+                    </div>
+
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <span class="info-label">Program Studi</span>
+                            <span class="info-value">Ilmu Komputer (S1)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Fakultas / Kampus</span>
+                            <span class="info-value">FTB - Univ. Yatsi Madani</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Domisili</span>
+                            <span class="info-value">Kota Tangerang, Banten (15133)</span>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-label">Email Formal</span>
+                            <span class="info-value" style="font-size: 0.85rem; word-break: break-all;">nandayudhistiraw@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Three Pillars / Distinct Qualities -->
+                <div class="pillars-column">
+                    <!-- Pillar 1: AI-Powered Autonomous Learning -->
+                    <div class="pillar-card">
+                        <div class="pillar-header">
+                            <div class="pillar-icon">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+                            <h4 class="pillar-title">Eksplorasi Mandiri & AI</h4>
+                        </div>
+                        <p class="pillar-desc">
+                            Saya terbiasa belajar otodidak dan memecahkan kendala teknis secara mandiri. Memanfaatkan kecerdasan buatan (AI) sebagai akselerator riset, saya mengeksplorasi deployment web, konfigurasi domain, dan struktur kode baru secara langsung tanpa menunggu panduan instan.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 2: Multimedia Foundation -->
+                    <div class="pillar-card">
+                        <div class="pillar-header">
+                            <div class="pillar-icon">
+                                <i class="fa-solid fa-layer-group"></i>
+                            </div>
+                            <h4 class="pillar-title">Fondasi Multimedia & Visual</h4>
+                        </div>
+                        <p class="pillar-desc">
+                            Berbekal latar belakang SMK Multimedia, saya memiliki kepekaan terhadap tata letak, proporsi visual, dan kenyamanan pengguna yang mempermudah saya dalam mempelajari UI/UX serta frontend development.
+                        </p>
+                    </div>
+
+                    <!-- Pillar 3: Analytical & Philosophical Mindset -->
+                    <div class="pillar-card">
+                        <div class="pillar-header">
+                            <div class="pillar-icon">
+                                <i class="fa-solid fa-brain"></i>
+                            </div>
+                            <h4 class="pillar-title">Pikiran Analitis & Reflektif</h4>
+                        </div>
+                        <p class="pillar-desc">
+                            Gemar merenungi persoalan secara mendalam (*philosophical inquiry*) membuat saya tidak cepat puas dengan solusi permukaan. Saya selalu berupaya memahami akar permasalahan dari sebuah error atau rancangan logika.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         JOURNEY SECTION (TIMELINE)
+         ========================================== -->
+    <section id="journey" class="section" style="background: rgba(17, 24, 39, 0.35);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-timeline"></i> Jejak Langkah</span>
+                <h2 class="section-title">Perjalanan <span class="gradient-text">Evolusi Saya</span></h2>
+                <p class="section-desc">Garis waktu nyata proses pembelajaran dari masa sekolah hingga menempuh bangku kuliah.</p>
+            </div>
+
+            <div class="timeline">
+                <!-- Timeline 1: SMK Multimedia -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-period">Masa SMK</div>
+                        <h4 class="timeline-title">Jurusan Multimedia</h4>
+                        <div class="timeline-institution">Fondasi Desain, Canva, & Media Digital Interaktif</div>
+                        <p class="timeline-desc">
+                            Mempelajari prinsip desain visual, pengeditan media, pembuatan presentasi edukasi interaktif, dan memahami bagaimana audiens berinteraksi dengan konten digital. Menjadi gerbang awal kecintaan saya pada teknologi.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline 2: Belajar Otodidak Awal -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-period">Awal Perkuliahan / Semester Awal</div>
+                        <h4 class="timeline-title">Belajar Web Development Otodidak</h4>
+                        <div class="timeline-institution">Eksplorasi Mandiri HTML5 & CSS3</div>
+                        <p class="timeline-desc">
+                            Mulai mengulik sintaks web dasar secara otodidak, merangkai halaman web percobaan, menghubungkan navigasi antar website, serta memahami logika box model dan styling responsif.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline 3: Universitas Yatsi Madani -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-period">Saat Ini (Aktif)</div>
+                        <h4 class="timeline-title">S1 Program Studi Ilmu Komputer</h4>
+                        <div class="timeline-institution">Fakultas Teknologi & Bisnis — Universitas Yatsi Madani, Kota Tangerang</div>
+                        <p class="timeline-desc">
+                            Mendalami kurikulum akademik komputasi meliputi pemrograman Python, Java (OOP), perancangan antarmuka UI/UX, dasar optimasi mesin pencari (SEO), dan algoritma problem-solving.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Timeline 4: Domain & Portofolio Mandiri -->
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-period">Pencapaian Terkini</div>
+                        <h4 class="timeline-title">Peluncuran Domain Resmi ndhistira.my.id</h4>
+                        <div class="timeline-institution">Eksplorasi GitHub Pages, DNS Management, & Integrasi WhatsApp</div>
+                        <p class="timeline-desc">
+                            Mempublikasikan website personal secara mandiri dengan konfigurasi DNS CNAME, antarmuka modern yang responsif, serta alur kontak terintegrasi sebagai langkah konkret persiapan karier.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SKILLS SECTION (TRANSPARAN & JUJUR)
+         ========================================== -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-code-branch"></i> Pemetaan Keahlian</span>
+                <h2 class="section-title">Keahlian & <span class="gradient-text">Fokus Belajar</span></h2>
+                <p class="section-desc">Transparansi kemampuan: apa yang sudah pernah saya bangun secara praktis vs apa yang sedang aktif saya dalami di perkuliahan.</p>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Box 1: Pernah Dibuat & Dipraktikkan -->
+                <div class="skill-box">
+                    <span class="skill-box-badge badge-mastered"><i class="fa-solid fa-circle-check"></i> Pernah Dibuat & Dipraktikkan</span>
+                    <h3 class="skill-box-title">Web Dasar & Multimedia</h3>
+                    <p class="skill-box-desc">
+                        Teknologi dan perangkat yang telah saya gunakan secara langsung dalam membangun halaman web mandiri serta materi grafis visual.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="tech-pill-tag"><i class="fa-brands fa-html5"></i> HTML5 Semantic</span>
+                        <span class="tech-pill-tag"><i class="fa-brands fa-css3-alt"></i> CSS3 Modern</span>
+                        <span class="tech-pill-tag"><i class="fa-solid fa-mobile-screen"></i> Responsive Layout</span>
+                        <span class="tech-pill-tag"><i class="fa-brands fa-git-alt"></i> Git & GitHub Pages</span>
+                        <span class="tech-pill-tag"><i class="fa-solid fa-globe"></i> DNS / CNAME Domain</span>
+                        <span class="tech-pill-tag"><i class="fa-solid fa-palette"></i> Canva Graphic Design</span>
+                    </div>
+                </div>
+
+                <!-- Box 2: Sedang Dipelajari di Perkuliahan -->
+                <div class="skill-box">
+                    <span class="skill-box-badge badge-learning"><i class="fa-solid fa-book-open-reader"></i> Sedang Dipelajari di Kampus</span>
+                    <h3 class="skill-box-title">Pemrograman & Desain Terstruktur</h3>
+                    <p class="skill-box-desc">
+                        Materi inti perkuliahan Ilmu Komputer Universitas Yatsi Madani yang sedang saya tekuni untuk memperkuat logika sistem dan antarmuka.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="tech-pill-tag"><i class="fa-brands fa-python"></i> Python (Dasar Logika)</span>
+                        <span class="tech-pill-tag"><i class="fa-brands fa-java"></i> Java (Konsep OOP)</span>
+                        <span class="tech-pill-tag"><i class="fa-solid fa-bezier-curve"></i> UI/UX Design & Prototyping</span>
+                        <span class="tech-pill-tag"><i class="fa-solid fa-magnifying-glass-chart"></i> Dasar SEO (Search Engine)</span>
+                        <span class="tech-pill-tag"><i class="fa-solid fa-code"></i> Visual Studio Code</span>
+                    </div>
+                </div>
+
+                <!-- Box 3: Metodologi & Karakter Kerja -->
+                <div class="skill-box">
+                    <span class="skill-box-badge badge-method"><i class="fa-solid fa-brain"></i> Cara Kerja & Soft Skills</span>
+                    <h3 class="skill-box-title">Pola Pikir & Karakter Kerja</h3>
+                    <p class="skill-box-desc">
+                        Kualitas personal dalam memproses informasi baru, menyelesaikan kendala error, dan berkolaborasi dalam tim.
+                    </p>
+                    <div class="skill-tags">
+                        <span class="tech-pill-tag"><i class="fa-solid fa-robot"></i> AI-Assisted Research</span>
+                        <span class="tech-pill-tag"><i class="fa-solid fa-magnifying-glass"></i> Self-Directed Explorer</span>
+                        <span class="tech-pill-tag"><i class="fa-solid fa-lightbulb"></i> Critical & Deep Thinking</span>
+                        <span class="tech-pill-tag"><i class="fa-solid fa-wrench"></i> Troubleshooting Mandiri</span>
+                        <span class="tech-pill-tag"><i class="fa-solid fa-comments"></i> Komunikasi Terbuka</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PORTFOLIO / PROJECTS SECTION
+         ========================================== -->
+    <section id="projects" class="section" style="background: rgba(17, 24, 39, 0.25);">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag"><i class="fa-solid fa-folder-closed"></i> Eksplorasi Nyata</span>
+                <h2 class="section-title">Karya & <span class="gradient-text">Proyek Saya</span></h2>
+                <p class="section-desc">Dokumentasi hasil eksperimen dan proyek nyata yang pernah dan sedang saya kerjakan.</p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1: Live Personal Website -->
+                <div class="project-card">
+                    <div class="project-preview">
+                        <i class="fa-solid fa-globe project-preview-icon"></i>
+                        <span class="project-tag-floating">Live Production</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Website Pribadi ndhistira.my.id</h3>
+                        <p class="project-desc">
+                            Proyek live pertama saya yang dibangun menggunakan HTML5, CSS modern responsif, JavaScript interaktif, dan di-hosting via GitHub Pages dengan integrasi DNS custom domain pribadi.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-pill">HTML5</span>
+                            <span class="tech-pill">CSS3</span>
+                            <span class="tech-pill">JavaScript</span>
+                            <span class="tech-pill">GitHub Pages</span>
+                            <span class="tech-pill">Custom Domain</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://ndhistira.my.id" target="_blank" class="project-btn">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka Website
+                            </a>
+                            <a href="https://github.com/nandayudhistirawibowo/web-pribadi" target="_blank" class="project-btn">
+                                <i class="fa-brands fa-github"></i> Repository
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Eksperimen Interaktif Multimedia -->
+                <div class="project-card">
+                    <div class="project-preview">
+                        <i class="fa-solid fa-earth-americas project-preview-icon"></i>
+                        <span class="project-tag-floating">Multimedia Archive</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Media Interaktif & Eksplorasi Benua</h3>
+                        <p class="project-desc">
+                            Eksperimen awal di masa SMK dalam merancang media interaktif edukasi bertema eksplorasi benua. Menjadi tonggak awal pembelajaran saya mengenai tata letak navigasi dan interaksi pengguna.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Interactive Presentation</span>
+                            <span class="tech-pill">Visual Layout</span>
+                            <span class="tech-pill">Canva Media</span>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-btn" style="color: var(--text-muted); cursor: default;">
+                                <i class="fa-solid fa-box-archive"></i> Arsip Belajar SMK
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Academic Labs (Python & Java) -->
+                <div class="project-card">
+                    <div class="project-preview">
+                        <i class="fa-solid fa-terminal project-preview-icon"></i>
+                        <span class="project-tag-floating">Academic Ongoing</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Laboratorium Logika: Python & Java</h3>
+                        <p class="project-desc">
+                            Kumpulan modul praktik dan latihan algoritma dasar di perkuliahan Ilmu Komputer Universitas Yatsi Madani yang berfokus pada pengolahan data, struktur logika percabangan, dan paradigma OOP.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Python</span>
+                            <span class="tech-pill">Java OOP</span>
+                            <span class="tech-pill">Algorithm</span>
+                            <span class="tech-pill">Problem Solving</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/nandayudhistirawibowo" target="_blank" class="project-btn">
+                                <i class="fa-brands fa-github"></i> Pantau di GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         CONTACT SECTION & DIRECT WHATSAPP
+         ========================================== -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contact-grid">
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <span class="section-tag"><i class="fa-solid fa-paper-plane"></i> Kontak Langsung</span>
+                        <h2 class="contact-info-title">Tertarik Berdiskusi? <br><span class="gradient-text">Mari Terhubung!</span></h2>
+                        <p class="contact-info-desc">
+                            Saya sangat terbuka untuk peluang magang, kolaborasi tugas/proyek, diskusi seputar dunia teknologi, maupun sekadar bertukar pikiran. Jangan ragu menyapa melalui kanal di bawah ini:
+                        </p>
+
+                        <div class="contact-channels">
+                            <!-- WhatsApp Channel -->
+                            <a href="https://wa.me/6281288951254?text=Halo%20Nanda%2C%20saya%20menghubungi%20lewat%20website%20portofolio%20kamu." target="_blank" class="channel-item">
+                                <div class="channel-icon wa">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div class="channel-detail">
+                                    <span>WhatsApp Langsung (Nomor Utama)</span>
+                                    <strong>0812-8895-1254</strong>
+                                </div>
+                            </a>
+
+                            <!-- Email Formal -->
+                            <a href="mailto:nandayudhistiraw@gmail.com" class="channel-item">
+                                <div class="channel-icon">
+                                    <i class="fa-regular fa-envelope"></i>
+                                </div>
+                                <div class="channel-detail">
+                                    <span>Email Formal</span>
+                                    <strong>nandayudhistiraw@gmail.com</strong>
+                                </div>
+                            </a>
+
+                            <!-- Instagram -->
+                            <a href="https://www.instagram.com/nywx22?dlrf=OXd3cTcxbGcxMnhq" target="_blank" class="channel-item">
+                                <div class="channel-icon ig">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </div>
+                                <div class="channel-detail">
+                                    <span>Instagram Pribadi</span>
+                                    <strong>@nywx22</strong>
+                                </div>
+                            </a>
+
+                            <!-- Domisili -->
+                            <div class="channel-item">
+                                <div class="channel-icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div class="channel-detail">
+                                    <span>Domisili</span>
+                                    <strong>Kota Tangerang, Banten (15133)</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direct WhatsApp Interactive Form -->
+                    <div class="wa-card">
+                        <div class="wa-card-header">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <div>
+                                <h4>Kirim Pesan WhatsApp Cepat</h4>
+                                <p style="font-size: 0.85rem; color: var(--text-muted);">Pesan akan langsung terhubung ke nomor 081288951254</p>
+                            </div>
+                        </div>
+
+                        <form id="waForm" onsubmit="sendWhatsApp(event)">
+                            <div class="form-group">
+                                <label for="waName"><i class="fa-solid fa-user"></i> Nama Anda</label>
+                                <input type="text" id="waName" class="form-control" placeholder="Contoh: Budi Santoso" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="waSubject"><i class="fa-solid fa-tag"></i> Topik / Keperluan</label>
+                                <input type="text" id="waSubject" class="form-control" placeholder="Contoh: Diskusi Magang / Kolaborasi Proyek" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="waMessage"><i class="fa-solid fa-comment-dots"></i> Pesan Anda</label>
+                                <textarea id="waMessage" class="form-control" placeholder="Tuliskan pesan Anda di sini..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-whatsapp" style="width: 100%; padding: 13px;">
+                                <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i>
+                                Kirim ke WhatsApp Sekarang
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="#hero" class="footer-logo">ndhistira<span>.</span></a>
+                    <p style="font-size: 0.85rem; margin-top: 6px; color: var(--text-muted);">
+                        Website portofolio & personal branding oleh Nanda Yudhistira Wibowo.
+                    </p>
+                    <p style="font-size: 0.8rem; color: #64748b;">
+                        Prodi Ilmu Komputer • Universitas Yatsi Madani • Tangerang, Banten.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <a href="#hero">Beranda</a>
+                    <a href="#about">Tentang</a>
+                    <a href="#journey">Perjalanan</a>
+                    <a href="#skills">Keahlian</a>
+                    <a href="#projects">Portofolio</a>
+                    <a href="#contact">Kontak</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nanda Yudhistira Wibowo (<a href="https://ndhistira.my.id" style="color: var(--accent-primary);">ndhistira.my.id</a>). All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         FLOATING WHATSAPP BUTTON (ALWAYS ACCESSIBLE)
+         ========================================== -->
+    <a href="https://wa.me/6281288951254?text=Halo%20Nanda%2C%20saya%20tertarik%20dengan%20portofolio%20website%20kamu." target="_blank" class="floating-wa-btn" aria-label="Hubungi via WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <div class="floating-wa-tooltip">Chat WhatsApp: 0812-8895-1254</div>
+    </a>
+
+    <!-- ==========================================
+         JAVASCRIPT LOGIC
+         ========================================== -->
+    <script>
+        // Toggle Mobile Menu
+        const navToggle = document.getElementById('navToggle');
+        const navMenu = document.getElementById('navMenu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('open');
+            const icon = navToggle.querySelector('i');
+            if (navMenu.classList.contains('open')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            } else {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Close menu on click link
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('open');
+                const icon = navToggle.querySelector('i');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // Active Navbar Link on Scroll
+        const sections = document.querySelectorAll('section');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 120;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Direct WhatsApp Sender Function
+        function sendWhatsApp(e) {
+            e.preventDefault();
+            const name = document.getElementById('waName').value.trim();
+            const subject = document.getElementById('waSubject').value.trim();
+            const message = document.getElementById('waMessage').value.trim();
+
+            const phoneNumber = '6281288951254';
+            const fullText = `Halo Nanda Yudhistira,\n\n` +
+                             `Saya ingin menghubungi Anda melalui website portofolio:\n` +
+                             `- Nama: ${name}\n` +
+                             `- Topik: ${subject}\n\n` +
+                             `Pesan:\n${message}`;
+
+            const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(fullText)}`;
+            window.open(waUrl, '_blank');
+        }
+    </script>
+</body>
+</html>
