@@ -7,13 +7,21 @@
     <meta name="description" content="Website portofolio resmi Nanda Yudhistira Wibowo. Mahasiswa Ilmu Komputer Universitas Yatsi Madani, Tangerang. Web Developer &amp; Tech Enthusiast.">
     <meta name="keywords" content="Nanda Yudhistira, ndhistira, portofolio, mahasiswa ilmu komputer, universitas yatsi madani, web developer">
     <meta name="author" content="Nanda Yudhistira Wibowo">
+    <link rel="canonical" href="https://ndhistira.my.id/">
     
     <!-- Open Graph / Meta Sosial -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://ndhistira.my.id/">
+    <meta property="og:site_name" content="Nanda Yudhistira">
+    <meta property="og:locale" content="id_ID">
     <meta property="og:title" content="Nanda Yudhistira Wibowo | Portofolio Pribadi">
     <meta property="og:description" content="Mahasiswa Ilmu Komputer Universitas Yatsi Madani. Portofolio persiapan karier dan eksplorasi dunia IT.">
-    <meta property="og:image" content="https://ndhistira.my.id/profile.jpg">
+    <meta property="og:image" content="https://ndhistira.my.id/og-sikantin.png">
+    <meta property="og:image:alt" content="Pratinjau SiKantin UYM, aplikasi pemesanan kantin kampus karya Nanda Yudhistira">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Nanda Yudhistira Wibowo | Portofolio Pribadi">
+    <meta name="twitter:description" content="Mahasiswa Ilmu Komputer Universitas Yatsi Madani. Portofolio persiapan karier dan eksplorasi dunia IT.">
+    <meta name="twitter:image" content="https://ndhistira.my.id/og-sikantin.png">
 
     <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -91,6 +99,12 @@
             text-decoration: none;
             color: inherit;
             transition: var(--transition);
+        }
+
+        a:focus-visible,
+        button:focus-visible {
+            outline: 3px solid var(--accent-primary);
+            outline-offset: 3px;
         }
 
         img {
@@ -1502,6 +1516,17 @@
                 font-size: 1.05rem;
             }
         }
+
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                scroll-behavior: auto !important;
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1929,8 +1954,8 @@
                             <span class="tech-pill">Vercel</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://sikantin.ndhistira.my.id" target="_blank" class="project-btn">
-                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            <a href="https://sikantin.ndhistira.my.id/" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="Live Demo SiKantin">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo SiKantin
                             </a>
                             <a href="https://github.com/nandayudhistirawibowo/sikantin" target="_blank" class="project-btn">
                                 <i class="fa-brands fa-github"></i> Repository
