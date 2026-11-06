@@ -920,7 +920,7 @@
            ========================================================================== */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 28px;
         }
 
@@ -1906,6 +1906,35 @@
             </div>
 
             <div class="projects-grid">
+                <!-- Project 1: siDeutsch (Full-Stack App) -->
+                <div class="project-card">
+                    <div class="project-preview">
+                        <i class="fa-solid fa-book-open project-preview-icon"></i>
+                        <span class="project-tag-floating">Full-Stack App</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">siDeutsch: Platform Belajar Bahasa Jerman</h3>
+                        <p class="project-desc">
+                            Platform pembelajaran bahasa Jerman interaktif untuk siapa saja, dari level A1-C2. Dilengkapi kuis dinamis, sistem XP dan Level CEFR, persiapan karir (Coming Soon), serta fitur Bookmark. Memiliki 400+ file materi dan 8.000+ kosakata.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-pill">Astro</span>
+                            <span class="tech-pill">Preact</span>
+                            <span class="tech-pill">Supabase</span>
+                            <span class="tech-pill">Vercel</span>
+                            <span class="tech-pill">SEO</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://sideutsch.ndhistira.my.id" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="Live Demo siDeutsch">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/nandayudhistirawibowo/sideutsch" target="_blank" rel="noopener noreferrer" class="project-btn" aria-label="Repository siDeutsch">
+                                <i class="fa-brands fa-github"></i> Repository
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Project 1: Live Personal Website -->
                 <div class="project-card">
                     <div class="project-preview">
@@ -1991,6 +2020,7 @@
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
